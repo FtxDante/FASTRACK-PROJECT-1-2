@@ -1,7 +1,7 @@
 const citiesHandler = require('./rename-object');
 const object = {
   name: 'test',
-  citys: [{
+  cities: [{
     name: 'Rio Grande',
     state: 'RS'
   },{
@@ -13,11 +13,7 @@ const object = {
   }],
 };
 
-console.log('object before: ')
-console.log(object)
-
 citiesHandler.rename('Pastel-De-Frango', object);
-citiesHandler.update('Rio', 'Fraguinho', object);
+citiesHandler.update('Rio Grande', 'Fraguinho', object);
 
-console.log('object after: ')
 console.log(object)
