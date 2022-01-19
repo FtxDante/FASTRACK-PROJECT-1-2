@@ -4,9 +4,7 @@ const citiesHandler = {
   },
 
   update: (cityName, newCityName, object) => {
-    const findIndexCity = ({name}) => name == cityName;
-    const index = object.cities.findIndex(findIndexCity)
-    object.cities[index].name = newCityName;
+    object.cities[object.cities.findIndex(({name}) => name == cityName)].name = newCityName;
   },
 }
 
