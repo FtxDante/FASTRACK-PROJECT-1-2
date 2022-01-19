@@ -8,14 +8,14 @@ const citiesHandler = {
   },
 
   update: (cityName, newCityName, object) => {
-    let found = false;
+    let found = 0;
     object.citys.filter((city) => {
-      if(city.name === cityName) {
-        found = true
+      if(city.name === cityName && found === 0) {
+        found++
         return city.name = newCityName;
       }
     })
-    if(!found) throw new Error('City was not found');
+    if(found.length === 0) throw new Error('City was not found');
   }
 }
 
