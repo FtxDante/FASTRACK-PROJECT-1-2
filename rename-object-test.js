@@ -1,5 +1,4 @@
 const citiesHandler = require('./rename-object');
-
 const object = {
   name: 'test',
   citys: [{
@@ -14,15 +13,11 @@ const object = {
   }],
 };
 
-citiesHandler.rename('Pastel-De-Frango', object);
-citiesHandler.update('Rio Grande', 'Fraguinho', object);
-
+console.log('object before: ')
 console.log(object)
 
-const text = 'sem juros  no Cartão Renner 4x de R$ 17,48*';
-var str = "Para maiores informações, veja o Capítulo 3.4.5.1";
-var a = str.split(/(capítulo \d+(\.\d)*)/i);
+citiesHandler.rename('Pastel-De-Frango', object);
+citiesHandler.update('Rio', 'Fraguinho', object);
 
-const b = text.split(/(\d*x .* \d+\,\d\d.)/);
-console.log(b)
-console.log(a)
+console.log('object after: ')
+console.log(object)
