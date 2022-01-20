@@ -1,4 +1,4 @@
-
+const update = require('./rename-cities')
 const object = {
   name: 'test',
   cities: [{
@@ -12,10 +12,5 @@ const object = {
     state: 'SP'
   }],
 };
-
-const update = (cityName, newCity, {cities}) => {
-  cities.find((city) =>{if(city.name== cityName) return city.name = newCity})
-}
-update('Rio Grande', 'Alcaçuz', object);
-
+update('Rio Grande', 'Guaramiringa', object);
 console.log(object)
