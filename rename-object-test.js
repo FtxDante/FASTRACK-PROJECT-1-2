@@ -1,4 +1,4 @@
-const citiesHandler = require('./rename-object');
+
 const object = {
   name: 'test',
   cities: [{
@@ -13,7 +13,9 @@ const object = {
   }],
 };
 
-citiesHandler.rename('Pastel-De-Frango', object);
-citiesHandler.update('Rio Grande', 'Fraguinho', object);
+const update = (cityName, newCity, {cities}) => {
+  cities.find((city) =>{if(city.name== cityName) return city.name = newCity})
+}
+update('Rio Grande', 'Alcaçuz', object);
 
 console.log(object)
